@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/spacing_large"
+            android:text="@string/add_to_playlist"
+            android:textColor="@color/grey_10"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="6dp"
+            android:src="@drawable/ic_close_black_24dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            tool:listitem="@layout/item_name_playlist" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCreateNew"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:text="@string/create_new_playlist"
+            android:textColor="@color/grey_10"
+            app:backgroundTint="@color/colorPrimary" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_add_playlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edt_playlist_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/enter_playlist_name"
+                android:inputType="textPersonName" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAddNamePlaylist"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="Add"
+                android:textColor="@color/grey_10"
+                app:backgroundTint="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

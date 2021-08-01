@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/actionDelete"
+        android:title="Delete From Playlist" />
+    <item
+        android:id="@+id/actionSetRingtone"
+        android:title="Set to Ringtone" />
+    <item
+        android:id="@+id/actionShare"
+        android:title="Share Song" />
+</menu>

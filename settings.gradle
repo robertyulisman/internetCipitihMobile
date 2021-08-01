@@ -1,0 +1,3 @@
+include ':barqiadsmanager'
+include ':app'
+rootProject.name='BarqiAudio'

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.PlaylistSongActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_music_song" />
+
+    <LinearLayout
+        android:id="@+id/player_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        tools:ignore="OnClick">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/bg_gradient_soft" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:focusable="true"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progressBarSongMiniPlayer"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_small"
+                android:indeterminate="false"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/progressbar_red" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/spacing_small">
+
+                <ImageButton
+                    android:id="@+id/bt_expand"
+                    android:layout_width="@dimen/spacing_xxxlarge"
+                    android:layout_height="@dimen/spacing_xxxlarge"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:onClick="onClick"
+                    android:rotation="180"
+                    android:tint="@color/grey_80"
+                    app:srcCompat="@drawable/ic_expand_arrow"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitleMiniPlayer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Locking Up Your Symptoms"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_90" />
+
+                    <TextView
+                        android:id="@+id/tvArtistMiniPlayer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Who He Should Be"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/grey_60" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/bt_playMiniPlayer"
+                        android:layout_width="@dimen/spacing_xxxlarge"
+                        android:layout_height="@dimen/spacing_xxxlarge"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:onClick="onClick"
+                        android:tint="@color/grey_80"
+                        app:srcCompat="@drawable/ic_play_arrow"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarLoadingMiniPlayer"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerInParent="true" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:background="@color/grey_5"
+        android:orientation="vertical" />
+
+    <com.mopub.mobileads.MoPubView
+        android:id="@+id/mopubBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <com.startapp.sdk.ads.banner.Banner
+        android:id="@+id/startAppBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>

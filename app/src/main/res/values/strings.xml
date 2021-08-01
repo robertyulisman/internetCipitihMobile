@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Anne Marie</string>
+    <string name="subtile" translatable="false">Music Palyer Online and Offline</string>
+    <string name="appId">ca-app-pub-4021984330308516~4934288053</string>
+    <string name="startapp_app_id">ca-app-pub-9409976776787512~4275723210</string>
+<!--    <string name="onesignal_id">ca-app-pub-9409976776787512~4275723210</string>-->
+    <string name="title">Title</string>
+    <string name="artist">Artist</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="setting">Setting</string>
+    <string name="search">Search</string>
+    <string name="download">Download</string>
+    <string name="add_to_playlist">Add to Playlist</string>
+    <string name="download_start_error">Download Start Error</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="msg_delete_playlist"><![CDATA[Are you sure want to delete <b>%s</b> from playlist]]></string>
+    <string name="success_delete_playlist">Success delete playlist <b>%s</b></string>
+    <string name="msg_add_to_favorite"><![CDATA[Are you sure want add <b>%s</b> to favorite ? ]]></string>
+    <string name="msg_success_add_to_favorite">Success add <b>%s</b> to favorite </string>
+    <string name="msg_success_delete_from_favorite">Success delete <b>%s</b> from favorite </string>
+    <string name="msg_success_delete_from_playlist">Success delete <b>%s</b> from playlist </string>
+    <string name="msg_failed_add_to_favorite">Failed add <b>%s</b> to favorite </string>
+    <string name="msg_failed_delete_from_favorite">Failed delete <b>%s</b> from favorite </string>
+    <string name="msg_failed_delete_from_playlist">Failed delete %s from playlist </string>
+    <string name="msg_song_ready_on_favorite">Sorry %s is ready on favorite </string>
+    <string name="failed_delete_playlist">Failed delete playlist %s</string>
+    <string name="ok">OK</string>
+    <string name="no">NO</string>
+    <string name="err_cannot_use_features">Cannot use some of the features without requested permission</string>
+    <string name="remove_from_download">Remove from Download</string>
+    <string name="song">Song</string>
+    <string name="offline">Offline</string>
+    <string name="favorites">Favorite</string>
+    <string name="playlist">Playlist</string>
+    <string name="library">Library</string>
+    <string name="app_version">Version %s </string>
+    <string name="countSong">%d Songs</string>
+    <string name="create_new_playlist">Create New Playlist</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="enter_playlist_name">Enter Playlist Name</string>
+    <string name="remove_from_favorite">Remove from Favorite</string>
+    <string name="remove_from_playlist">Remove From Playlist</string>
+    <string name="msg_update_app"><![CDATA[A news version of <b>%s</b> is available, please update the application for better performance ]]></string>
+    <string name="msg_update_redirect"><![CDATA[A new version is available %s please update the application for better performance ]]></string>
+    <string name="update_later">Later</string>
+    <string name="update_info">Update Info</string>
+    <string name="update_now">Update Now</string>
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="name_playlist_cannot_be_empty">Name playlist cannot be empty</string>
+    <string name="share_this_app">Share this App</string>
+    <string name="rate_this_app">Rate this App</string>
+    <string name="default_duration">00:00:00</string>
+    <string name="no_lyric_available_msg">Lyric not available</string>
+    <string name="msg_guide_lyric">Swipe right to see the lyric</string>
+    <string name="info">INFO</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="msg_guide_play"><![CDATA[Audio must <b>first be played online</b>, after that you can play it <b>offline</b>]]></string>
+
+</resources>

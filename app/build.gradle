@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply from: '../shared_dependencies.gradle'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+//apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '1.0.2'
+    defaultConfig {
+        applicationId "com.senusatech.annemarie"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 15
+        versionName "1.5"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "BASE_URL", '"https://cryptic-everglades-82283.herokuapp.com/"')
+        buildConfigField("String", "ACCESS_TOKEN", '"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNTg4NzcxMjA4fQ.aY2Rw8GOdUD3ewg6spv4rQPA3avdNNeAed2hBtTm40w"')
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation project(":barqiadsmanager")
+//    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation platform('com.google.firebase:firebase-bom:26.8.0')
+//    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+}
